@@ -24,13 +24,13 @@ const summary = () => {
     return date.format('MMMM, YYYY');
   };
  
-//fetch the attendance report from mongodb using the api link below, PLEASE NOTE that inorder to get the reporrt for any month you need to change the params values for the month and year manually, and if there is an error, we catch it
+
 const fetchAttendanceReport = async () => {
   try {
     const currentMonth = currentDate.month() + 1; // Month is zero-based, so we add 1
     const currentYear = currentDate.year();
 
-    const response = await axios.get('http://192.168.43.99:8000/attendance-report-all-employees', {
+    const response = await axios.get('http://localhost:8000/attendance-report-all-employees', {
       params: {
         month: currentMonth,
         year: currentYear,
