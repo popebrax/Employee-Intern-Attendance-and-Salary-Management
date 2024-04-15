@@ -23,7 +23,7 @@ const Summary2 = () => {
       const month = moment(date).format("MM");
       const day = moment(date).format("DD");
       const response = await axios.get(
-        `http://192.168.43.99:8000/attendance-report-all-employees?year=${year}&month=${month}&date=${day}`
+        `http://localhost:8000/attendance-report-all-employees?year=${year}&month=${month}&date=${day}`
       );
       setAttendanceReport(response.data.report);
     } catch (error) {
