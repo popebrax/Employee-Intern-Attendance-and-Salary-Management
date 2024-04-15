@@ -15,7 +15,7 @@ const markemployee = () => {
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get("http://192.168.43.99:8000/employees");
+        const response = await axios.get("http://localhost:8000/employees");
         setEmployees(response.data);
       } catch (error) {
         console.log("error fetching employee data", error);
